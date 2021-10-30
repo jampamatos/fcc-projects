@@ -8,133 +8,148 @@
     <title>FCC Survey Page</title>
 </head>
 <body>
-    <h1 id="title">Help us improve!</h1>
-    <p id="description">Tell us a little bit about you and help us improve our services!</p>
+    <div id="wrapper">
 
-    <form id="survey-form">
+        <header>
+            <h1 id="title">We want to get better.</h1>
+            <p id="description">Tell us a little bit about you and help us improve our services.</p>
+        </header>
+        
 
-        <section id="general-info">
-            <p>
-                <label for="name" id="name-label">
-                    <span>Name: </span><strong><abbr title="required">*</abbr></strong>
-                </label>
-                <input type="text" id="name" name="name" placeholder="Type in your name!" required>
-            </p>
-    
-            <p>
-                <label for="email" id="email-label">
-                    <span>Email: </span><strong><abbr title="required">*</abbr></strong>
-                  </label>
-                  <input type="email" id="email" name="email" placeholder="Type in your email!" required>
-            </p>
-    
-            <p>
-                <label for="number" id="number-label">
-                    <span>Age: </span><strong><abbr title="required">*</abbr></strong>
-                  </label>
-                  <input type="number" id="number" name="age" placeholder="What's your age again?" 
-                        min="14" max="100" required>
-            </p>
-        </section>
+        <form id="survey-form">
 
-        <section id="professional-info">
-            <p>
-                <label for="skill-level">
-                  <span>What do you consider to be your skill level?:</span>
-                </label>
-                <select id="dropdown" name="skill-level">
-                  <option value="none" disabled selected>Select one</option>
-                  <option value="padawan">Padawan</option>
-                  <option value="jedi-knight">Jedi Knight</option>
-                  <option value="jedi-master">Jedi Master</option>
-                  <option value="jedi-counselor">Jedi Counselor</option>
-                  <option value="darth">Dark Lord of the Sith</option>
-                </select>
-            </p>
+            <section id="general-info">
+                <p>
+                    <label for="name" id="name-label" class="input-text">
+                        <span>Name: </span><strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Type in your name!" required>
+                </p>
+        
+                <p>
+                    <label for="email" id="email-label" class="input-text">
+                        <span>Email: </span><strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Type in your email!" required>
+                </p>
+        
+                <p>
+                    <label for="number" id="number-label" class="input-text">
+                        <span>Age: </span><strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="number" id="number" name="age" placeholder="What's your age again?" 
+                            min="14" max="100" required>
+                </p>
+            </section>
 
-            <p>What is your stack?</p>
-            <fieldset>
-                <legend>Stack</legend>
-                <ul>
-                    <li>
-                        <label for="stack-1">
-                        <input type="radio" id="stack-1" name="stack" value="frontend" >
-                        Front-End
-                        </label>
-                    </li>
-                    <li>
-                        <label for="stack-2">
-                        <input type="radio" id="stack-2" name="stack" value="backend">
-                        Back-End
-                        </label>
-                    </li>
-                    <li>
-                        <label for="stack-3">
-                        <input type="radio" id="stack-3" name="stack" value="fullstack">
-                        Full Stack
-                        </label>
-                    </li>
-                </ul>
-            </fieldset>
+            <section id="professional-info">
+                <p class="skill-select">
+                    <label for="skill-level">
+                    <span>What do you consider to be your skill level?:</span>
+                    </label>
+                    <select id="dropdown" name="skill-level">
+                    <option value="none" disabled selected>Select one</option>
+                    <option value="padawan">Padawan</option>
+                    <option value="jedi-knight">Jedi Knight</option>
+                    <option value="jedi-master">Jedi Master</option>
+                    <option value="jedi-counselor">Jedi Counselor</option>
+                    <option value="darth">Dark Lord of the Sith</option>
+                    </select>
+                </p>
 
-            <p>What languages do you use?</p>
-            <fieldset>
-                <legend>Languages</legend>
-                <ul>
-                    <li>
-                        <label for="lang-1">
-                        <input type="checkbox" id="lang-1" name="lang" value="html-css" >
-                        HTML/CSS
-                        </label>
-                    </li>
-                    <li>
-                        <label for="lang-2">
-                        <input type="checkbox" id="lang-2" name="lang" value="javascript">
-                        Javascript
-                        </label>
-                    </li>
-                    <li>
-                        <label for="lang-3">
-                        <input type="checkbox" id="lang-3" name="lang" value="csharp">
-                        C#
-                        </label>
-                    </li>
-                    <li>
-                        <label for="lang-4">
-                        <input type="checkbox" id="lang-4" name="lang" value="ruby" >
-                        Ruby
-                        </label>
-                    </li>
-                    <li>
-                        <label for="lang-5">
-                        <input type="checkbox" id="lang-5" name="lang" value="python">
-                        Python
-                        </label>
-                    </li>
-                    <li>
-                        <label for="lang-6">
-                        <input type="checkbox" id="lang-6" name="lang" value="other">
-                        Other
-                        </label>
-                    </li>
-                </ul>
-            </fieldset>
-        </section>
+                <div id="stack-lang-wrap">
+                    <div id="stack">
+                        <p>What is your stack?</p>
+                        <fieldset>
+                            <legend>Stack</legend>
+                            <ul>
+                                <li>
+                                    <label for="stack-1" class="radio-control">
+                                    <input type="radio" id="stack-1" name="stack" value="frontend" >
+                                    <span class="radio-span">Front-End</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="stack-2" class="radio-control">
+                                    <input type="radio" id="stack-2" name="stack" value="backend">
+                                    <span class="radio-span">Back-End</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="stack-3" class="radio-control">
+                                    <input type="radio" id="stack-3" name="stack" value="fullstack">
+                                    <span class="radio-span"> Full Stack</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                    
+                    <div id="lang">
+                        <p>What languages do you use?</p>
+                        <fieldset>
+                            <legend>Languages</legend>
+                            <ul>
+                                <li>
+                                    <label for="lang-1">
+                                    <input type="checkbox" id="lang-1" name="lang" value="html-css" >
+                                    HTML/CSS
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="lang-2">
+                                    <input type="checkbox" id="lang-2" name="lang" value="javascript">
+                                    Javascript
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="lang-3">
+                                    <input type="checkbox" id="lang-3" name="lang" value="csharp">
+                                    C#
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="lang-4">
+                                    <input type="checkbox" id="lang-4" name="lang" value="ruby" >
+                                    Ruby
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="lang-5">
+                                    <input type="checkbox" id="lang-5" name="lang" value="python">
+                                    Python
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="lang-6">
+                                    <input type="checkbox" id="lang-6" name="lang" value="other">
+                                    Other
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
 
-        <section id="comments">
-            <p>
-                <label for="comment" id="comments-label">
-                    <span>Give your comments and suggestions here: </span>
-                </label>
-                <textarea id="textarea" name="comments" placeholder="Comment here!"></textarea>
-            </p>
-        </section>
+                    
+                </div>
+                
+                
+            </section>
 
-        <section id="submitarea">
-            <button type="submit" id="submit">Submit!</button>
-        </section>
+            <section id="comments">
+                <p>
+                    <label for="comment" id="comments-label">
+                        <span>Give your comments and suggestions here: </span>
+                    </label>
+                    <textarea id="textarea" name="comments" placeholder="Comment here!"></textarea>
+                </p>
+            </section>
 
-    </form>
-    
+            <section id="submitarea">
+                <button type="submit" id="submit"><span>Submit!</span></button>
+            </section>
+
+        </form>
+    </div>
 </body>
 </html>
