@@ -1,0 +1,21 @@
+
+
+
+#comments {
+    max-width: 820vw;
+    margin-top: 5vh;
+}
+
+#textarea {
+    width: 100%;
+    height: auto;
+    min-height: 20vh;
+    outline: none;
+    resize: none;
+    border: 1px solid grey;
+}
+
+#textarea-text-area {
+    width: 100%;
+    height: auto;
+}
