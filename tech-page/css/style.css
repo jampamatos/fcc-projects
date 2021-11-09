@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300&display=swap');
+:root {
+    --darkblue: #1F2937;
+    --mediumblue: #053073;
+    --lightblue: #3882F6;
+    --darkgray: #464d5b;
+    --mediumgray: #969eae;
+    --lightgray: #E5E7EB;
+    --whiteish: #F9FAF8;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "navbar main-doc main-doc main-doc main-doc main-doc main-doc";
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#navbar {
+    grid-area: navbar;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgray);
+    border-right: 3px solid var(--darkblue);
+}
+
+#navbar header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkblue);
+    padding: 10px;
+}
+
+#logo {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#header-text {
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    color: var(--whiteish);
+}
+
+#navbar a {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--darkblue);
+}
+
+#navbar a:hover {
+    background-color: var(--mediumgray);
+    color: var(--mediumblue);
+}
+
+#main-doc {
+    grid-area: main-doc;
+    padding: 10px 50px;
+}
+
+.main-section {
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--darkgray);
+}
+
+.main-section h2 {
+    color: var(--mediumblue);
+}
+
+.main-section p {
+    text-align: justify;
+}
+
+.back {
+    display: block;
+    text-align: right;
+}
+
+.back a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--darkgray);
+}
+
+.back a:hover {
+    color: var(--mediumgray);
+}
+
+code {
+    background-color: var(--lightgray);
+    display: block;
+    padding: 20px;
+}
+
+.inline {
+    display: inline;
+    padding: 0 5px;
+}
+
+@media (max-width: 500px) {
+    body {
+        grid-template-areas: "navbar main-doc"
+    }
+    #main-doc {
+        padding: 0 10px;
+    }
+}
